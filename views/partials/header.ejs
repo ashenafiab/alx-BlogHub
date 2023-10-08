@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>alx BlogHub</title>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Sacramento|Montserrat">
+  <script src="https://kit.fontawesome.com/c65d27929e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-+7zvzJ4zQ5zJQ6J5J8vJz1+8zjzQ6Kv5QJQb+5vJjzQvJ9z6jJ+7xLJzvzQJ+Jx1bJ9zJ9zJ9zJ9zJ9zJ9zJ9w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg fixed-header">
+      <a class="navbar-brand" href="/">alx BlogHub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item" id="home"><a class="nav-link active" aria-current="page" href="/">HOME</a></li>
+          <li class="nav-item" id="compose"><a class="nav-link active" aria-current="page" href="/compose">COMPOSE</a>
+          </li>
+          <li class="nav-item" id="about"><a class="nav-link" aria-current="page" href="/about">ABOUT US</a></li>
+          <li class="new-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <% if (user && user.username) { %>
+                <span class="badge badge-primary">
+                  <%= user.username.substr(0, 2).toUpperCase() %>
+                </span>
+              <% } else { %>
+                <i class="fa-regular fa-user"></i>
+              <% } %>
+            </a>
+            <ul class="dropdown-menu">
+              <% if (!user) { %>
+                <li class="nav-item" id="signup"><a class="nav-link" aria-current="page" href="/signup">SIGN UP</a></li>
+                <li class="nav-item" id="login"><a class="nav-link" aria-current="page" href="/login">LOG IN</a></li>
+              <% } else { %>
+                <li class="nav-item" id="logout"><a class="nav-link" aria-current="page" href="/logout">LOG OUT</a></li>
+              <% } %>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- bootstrap javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>

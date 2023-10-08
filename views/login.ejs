@@ -1,0 +1,24 @@
+<%- include('./partials/header'); -%>
+
+<div class="container" id="all">
+  <div class="signup-form">
+  <h1 class="accnthdr">Login</h1>
+  <br>
+  <form action="/login" method="post">
+    <div class="mb-3">
+      <label class="form-label">Username</label>
+      <input type="text" class="form-control form-control-sm" name="username" required placeholder="Enter your user name">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input type="password" class="form-control form-control-sm" name="password" required placeholder="Enter your password">
+    </div>
+    <br>
+    <div class="txt-ctr">
+    <button type="submit" class="btn btn-primary">Log In</button>
+  </div>
+  </form>
+</div>
+</div>
+
+<%- include('./partials/footer'); -%>

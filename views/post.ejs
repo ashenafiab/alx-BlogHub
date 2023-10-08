@@ -1,0 +1,58 @@
+<%- include('./partials/header'); -%>
+
+<div class="container" id="all">
+  <h1 class="custom-title">
+    <%= post.title %> <!-- Access the title property of the post object -->
+  </h1>
+  <p class="custom-content">
+    <%= post.content %> <!-- Access the content property of the post object -->
+  </p>
+
+  <!-- Add a form for submitting comments -->
+  <form action="/posts/<%= post._id %>/comments" method="POST">
+    <div class="mb-3">
+      <label for="user" class="form-label">Name:</label>
+      <input type="text" class="form-control form-control-sm" name="user" id="user" required>
+    </div>
+    <div class="mb-3">
+      <label for="text" class="form-label">Comment:</label>
+      <textarea class="form-control form-control-sm" name="text" id="text" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <!-- Display the comments -->
+  <% if (post.comments && post.comments.length > 0) { %>
+    <br>
+    <h5>Comments:</h5>
+    <div class="comments-container">
+      <% post.comments.forEach(function(comment) { %>
+        <div class="comment card mb-3">
+          <div class="card-body">
+            <h6 class="card-title"><%= comment.user %>:</h6>
+            <p class="card-text"><%= comment.text %></p>
+            <div class="d-flex align-items-center">
+              <form action="/posts/<%= post._id %>/comments/<%= comment._id %>/upvote" method="POST" class="me-2">
+                <button type="submit" class="btn btn-sm btn-outline-success">
+                  <i class="fa-solid fa-thumbs-up fa-xs"></i>
+                </button>
+              </form>
+              <form action="/posts/<%= post._id %>/comments/<%= comment._id %>/downvote" method="POST" class="me-2">
+                <button type="submit" class="btn btn-sm btn-outline-danger">
+                  <i class="fa-solid fa-thumbs-down fa-xs"></i>
+                </button>
+              </form>
+              <span class="ms-2">
+                <%= comment.upvotes - comment.downvotes %> points
+              </span>
+            </div>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  <% } else { %>
+    <p>No comments yet.</p>
+  <% } %>
+</div>
+
+<%- include('./partials/footer'); -%>

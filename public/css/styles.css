@@ -1,0 +1,179 @@
+#all{
+  margin-top: 80px;
+  margin-bottom: 100px;
+  padding-bottom: 100px;
+}
+
+.ctr {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+}
+
+/* Style the fixed header */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar {
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+body{
+  background-color: #EAF6F6;
+  padding: 20px;
+    margin-top: 60px; /* Adjust this to match your header's height */
+    margin-bottom: 60px; /* Adjust this to match your footer's height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: calc(100vh - 120px); /* Calculate the height to fill the viewport */
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link{
+  color: #fff !important;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+  color: #1abc9c !important;
+  display: inline-block;
+  transition: all .7s ease;
+}
+
+.navbar-brand {
+font-size: 25px;
+font-weight:bolder;
+padding-left: 3rem;
+}
+
+.bg{
+  background-color: #061D25 !important;
+}
+
+/* Style the dropdown menu background and text color */
+.new-item.dropdown .dropdown-menu {
+  background-color: #061D25 !important; /* Change to your desired background color */
+}
+
+.new-item.dropdown .dropdown-item {
+  color: #fff; /* Change to your desired text color */
+}
+
+.new-item.dropdown .nav-link {
+  padding-right: 3rem; /* Adjust the padding as needed */
+}
+
+.footer {
+  width: 100%;
+  background: #061D25;
+  padding: 5px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.footer a {
+  color: #70726F;
+  font-size: 20px;
+  padding: 5px;
+  border-right: 1px solid #70726F;
+  transition: all .5s ease;
+}
+.footer a:first-child {
+  border-left: 1px solid #70726F;
+}
+.footer a:hover {
+  color: white;
+}
+
+
+
+
+/* Basic styling for the publish button */
+.pubbtn {
+display: inline-block;
+padding: 5px 10px;
+color: black; /* Change this to your desired text color */
+border: 1px solid black; /* Change this to your desired border color */
+border-radius: 10px;
+font-size: 13px;
+text-align: center;
+text-decoration: none;
+transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.pubbtn:hover {
+background-color: grey; /* Change this to your desired hover background color */
+}
+
+
+
+
+
+/* Style for blog post titles */
+.custom-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight:bolder;
+  font-size: 24px;
+  text-align: center;
+  /* Add other styles as needed */
+  cursor: pointer; /* Add pointer cursor to indicate clickability */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Style for blog post content */
+.custom-content {
+  font-family: 'Merriweather', serif;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 2;
+  color: #40514E;
+  font-size: 16px;
+  /* Add other styles as needed */
+}
+
+.read-more:hover {
+  color: #0056b3; /* Darker color on hover */
+}
+
+/* Sample CSS to center-align and size the signup form */
+.signup-form {
+  max-width: 460px; /* Adjust the maximum width as desired */
+  margin: 0 auto; /* Center-align the form horizontally */
+  padding: 20px; /* Add some padding for spacing */
+}
+
+.accnthdr{
+  color: #061D25;
+  text-align: center;
+}
+
+.txt-ctr{
+  text-align: center;
+}
+
+.custom-col {
+  /* background-color: #DAFFFB; Dimmer background color for the column */
+   border: 2px dotted #061D25; /*Border color #061D25 */
+  border-radius: 15px; /* Oval border radius */
+  padding: 20px; /* Add padding to space out content from border */
+  margin: 10px; /* Add margin to separate columns */
+  
+
+}

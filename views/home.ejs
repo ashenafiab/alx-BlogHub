@@ -1,0 +1,23 @@
+<%- include('./partials/header'); -%>
+
+  <div class="container-fluid" id="all">
+    <div class="row">
+      <% posts.forEach(function(post){ %>
+        <div class="col-md-6">
+          <div class="custom-col">
+            <h1 class="custom-title">
+              <%= post.title %>
+            </h1>
+            <p class="custom-content">
+              <%= post.content.substring(0,600) + " ..." %>
+                <br>
+                <a class="read-more" href="posts/<%= post._id %>">Read More</a>
+            </p>
+
+          </div>
+        </div>
+
+        <% }); %>
+    </div>
+  </div>
+  <%- include('./partials/footer'); -%>

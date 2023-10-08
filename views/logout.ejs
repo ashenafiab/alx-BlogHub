@@ -1,0 +1,15 @@
+<%- include('./partials/header'); -%>
+
+<div class="container" id="all">
+  <h1 class="accnthdr">
+    <% if (user && userInitial) { %>
+      Logout (<%= userInitial %>)
+    <% } else { %>
+      Logout
+    <% } %>
+  </h1>
+  <p>You have been successfully logged out.</p>
+  <a href="/">Return to Home</a>
+</div>
+
+<%- include('./partials/footer'); -%>
